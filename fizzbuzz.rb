@@ -11,11 +11,16 @@
 # end
 #end
 
-def fizzbuzz?(num)
-  case
-  when num % 15 == 0 then "FizzBuzz"
-  when num % 3  == 0 then "Fizz"
-  when num % 5  == 0 then "Buzz"
-  else num
+def fizzbuzz(n)
+  (1..n).each do |i|
+    if i % 3 == 0 && i % 5 == 0
+      puts 'fizzbuzz'
+    elsif i % 3 == 0
+      puts 'fizz'
+    elsif i % 5 == 0
+      puts 'buzz'
+    else
+      puts i
+    end
   end
 end
